@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.ActeurImg {
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+
+.Acteur{
+    display: flex;
+    margin-left: 20px;
+}
+
+
+.InfoActeur{
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-left: 20px;
+    font-family: 'Istok Web', sans-serif;
+}
+
+
+.ActeurNom{
+    
+    color: #ffffff; /* Couleur rouge au survol */
+    font-size: 30px;
+    margin: 0px;
+    font-weight:normal;
+}
+
+
+.ActeurRole{
+    font-weight: bold;
+    color: #858585; /* Couleur rouge au survol */
+    font-size: 25px;
+    margin: 0px;
+}
+
+
+.ListeActeur
+{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+   
+    .ActeurImg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ActeurNom{
+        font-size: 25px;
+
+    }
+    
+    .ActeurRole{
+        font-size: 20px;
+    }
+    
+    .InfoActeur{
+        margin-top: 20px;
+
+    }
+}
+@media screen and (max-width: 1024px) {
+    .ActeurImg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ActeurNom{
+        font-size: 22px;
+
+    }
+    
+    .ActeurRole{
+        font-size: 18px;
+    }
+    
+    .InfoActeur{
+        margin-top: 10px;
+
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    .ActeurImg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ActeurNom{
+        font-size: 16px;
+
+    }
+    
+    .ActeurRole{
+        font-size: 12px;
+    }
+    
+    .InfoActeur{
+        margin-top: 8px;
+
+    }
+
+    .ListeActeur{
+        gap: 20px
+    }
+
+    .Acteur{
+        display: flex;
+        margin-left: 5px;
+    }
+    
+}
+
+
+@media screen and (max-width: 425px) {
+    .ActeurImg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ActeurNom{
+        font-size: 10px;
+
+    }
+    
+    .ActeurRole{
+        font-size: 8px;
+    }
+    
+    .InfoActeur{
+        margin-top: 6px;
+
+    }
+
+    .ListeActeur{
+        gap: 18px;
+        padding-left: 0px;
+    }
+
+    .Acteur{
+        display: flex;
+        margin-left: 0px;
+    }
+    
+}

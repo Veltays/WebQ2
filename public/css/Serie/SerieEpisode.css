@@ -1,0 +1,376 @@
+.SelectionSaison {
+    position: relative;
+    display: inline-block;
+}
+
+.BtnSaison {
+    appearance: none;
+    /* enlève le style natif du select */
+    background-color: #252B36;
+    border-radius: 15px;
+    margin-left: 45px;
+
+    border: none;
+    height: 12vh;
+    width: 23vw;
+
+    padding: 10px 40px 10px 55px;
+    /*  padding-left augmenté à 30px */
+    font-size: 34px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    /* Couleur rouge au survol */
+
+}
+
+.select {
+    margin-left: 15px;
+}
+
+
+
+.FlecheBas {
+    position: absolute;
+    right: 33px;
+    top: 21%;
+    pointer-events: none;
+    /* ne gêne pas le clic sur le select */
+    width: 55px;
+    height: 41px;
+}
+
+
+.rotateUp {
+    transform: translateY(-3%) rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.rotateDown {
+    transform: translateY(-3%) rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+/* Liste episode */
+
+
+.ListeEpisode {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+
+    width: 55%;
+    height: 1000px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Barre de scroll decaler a droite*/
+    /* Barre de scroll decaler a droite*/
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: #8B763A #252B36;
+    /* couleur de la barre et du fond */
+
+
+    margin-top: 5vh;
+    margin-left: 0.1vw;
+    padding-right: 1vw;
+    padding-left: 1.5vw;
+
+}
+
+
+
+.EpisodeX {
+    height: 31vh;
+    /* ajuste selon ton design */
+    width: 95%;
+    background-color: #2A354A;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 20px;
+    padding: 18px;
+}
+
+.EpisodeX:hover {
+    background-color: #3A445A;
+    transition: background-color 0.3s ease;
+}
+
+.ImgEpisodContainer {
+    background-color: #8B763A;
+    width: 22vw;
+    height: 10vw;
+
+}
+
+.EpisodeImg {
+
+    width: 22vw;
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+
+.EpisodeTexte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    width: 269px;
+}
+
+.TitreEpisode {
+    font-family: 'Istok Web', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+
+.TexteEpisode {
+
+    font-family: 'Istok Web', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #ffffff;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+
+.Btn-Ajouter-Episode-Liste,
+.Btn-Ajouter-Episode-Favori,
+.Btn-Episode-Deja-Vu {
+    all: unset;
+    cursor: pointer;
+
+}
+
+
+.Btn-Ajouter-Episode-Liste img,
+.Btn-Ajouter-Episode-Favori img,
+.Btn-Episode-Deja-Vu img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.EpisodeBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.EpisodeBtn :hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+
+}
+
+.ImgAndTxt {
+    display: flex;
+    gap: 30px
+}
+
+
+
+@media screen and (max-width: 425px) {
+    .ListeEpisode {
+        margin-top: 16px;
+        margin-left: 3px;
+        gap: 11px;
+        padding-right: 0.5vh;
+
+    }
+
+    .EpisodeX {
+        height: 8vh;
+        width: 90%;
+        padding: 8px;
+        gap: 0px;
+        justify-content: center;
+
+    }
+
+
+    .ImgAndTxt {
+        display: flex;
+        gap: 10px;
+        width: 237px;
+        height: 62px;
+
+    }
+
+
+    .BtnSaison {
+        border-radius: 15px;
+        margin-left: 20px;
+        height: 4vh;
+        width: 18vw;
+        font-size: 10px;
+        padding: 9px 13px 10px 11px;
+    }
+
+    .FlecheBas {
+        position: absolute;
+        right: 4px;
+        top: 21%;
+        pointer-events: none;
+        width: 23px;
+        height: 20px;
+    }
+
+
+    .TitreEpisode {
+        font-size: 8px;
+    }
+
+    .EpisodeTexte {
+        width: 104px;
+        overflow-y: auto;
+        gap: 2px;
+    }
+
+    .TexteEpisode {
+        width: 95px;
+        height : 42px;
+        font-size: 8px;
+        margin-top: 1px;
+        margin-bottom: -9px;
+    }
+
+    .Btn-Episode-Deja-Vu img,
+    .Btn-Ajouter-Episode-Favori img,
+    .Btn-Ajouter-Episode-Liste img {
+        width: 15px;
+        height: 15px;
+    }
+
+
+    .Btn-Ajouter-Episode-Liste-Img,
+    .Btn-Ajouter-Episode-Favori,
+    .Btn-Episode-Deja-Vu {
+        margin-left: 5px;
+    }
+
+    .EpisodeBtn {
+        gap: 2px;
+    }
+
+    .EpisodeImg {
+        height: 7vh;
+        padding-top: 1px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 360px) {
+    .ListeEpisode {
+        margin-top: 10px;
+        margin-left: 1px;
+        gap: 8px;
+        padding-right: 0.4vh;
+
+    }
+
+    .EpisodeX {
+        height: 8vh;
+        width: 93%;
+        padding: 5px;
+        gap: 0px;
+        justify-content: center;
+
+    }
+
+
+    .ImgAndTxt {
+        display: flex;
+        gap: 4px;
+        width: 200px;
+        height: 62px;
+    }
+
+
+    .BtnSaison {
+        border-radius: 15px;
+        margin-left: 20px;
+        height: 4vh;
+        width: 23vw;
+        font-size: 10px;
+        padding: 9px 13px 10px 11px;
+    }
+
+    .FlecheBas {
+        position: absolute;
+        right: 4px;
+        top: 21%;
+        pointer-events: none;
+        width: 23px;
+        height: 20px;
+    }
+
+
+    .TitreEpisode {
+        font-size: 6px;
+    }
+
+    .EpisodeTexte {
+        width: 92px;
+        overflow-y: auto;
+        gap: 2px;
+    }
+
+    .TexteEpisode {
+        width: 88px;
+        height : 42px;
+        font-size: 5px;
+        margin-top: 1px;
+        margin-bottom: -9px;
+    }
+
+    .Btn-Episode-Deja-Vu img,
+    .Btn-Ajouter-Episode-Favori img,
+    .Btn-Ajouter-Episode-Liste img {
+        width: 15px;
+        height: 15px;
+    }
+
+
+    .Btn-Ajouter-Episode-Liste-Img,
+    .Btn-Ajouter-Episode-Favori,
+    .Btn-Episode-Deja-Vu {
+        margin-left: -13px;
+    }
+
+    .EpisodeBtn {
+        gap: 2px;
+    }
+
+    .EpisodeImg {
+        height: 6vh;
+        margin-top: 7px;
+        margin-left: -3px;
+    }
+}

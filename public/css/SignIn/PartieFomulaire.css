@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+
+
+
+.ErrorFormEmail,
+.ErrorFormPassword,
+.ErrorFormConfPassword,
+.ErrorFormNom,
+.ErrorFormPrenom,
+.ErrorFormPseudo,
+.ErrorFormBirthday {
+    font-family: 'Istok Web';
+    font-size: 0.6vw;
+    font-weight: bold;
+    color: rgb(203, 51, 51);
+    margin-top: 10px;
+    margin-left: 10px;
+    display: none;
+}
+
+/* Largeur spécifique aux champs email et mot de passe */
+.ErrorFormEmail,
+.ErrorFormPassword,
+.ErrorFormConfPassword {
+    width: 26vw;
+}
+
+/* Largeur spécifique aux autres champs */
+.ErrorFormNom,
+.ErrorFormPrenom,
+.ErrorFormPseudo,
+.ErrorFormBirthday {
+    width: 14vw;
+}
+
+.TitreBouton {
+    margin-top: 35px;
+    width: 45vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+
+.boutonRetour {
+
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.LogoFormulaire {
+    width: 60px;
+    height: 50px;
+
+}
+
+.Button-Return-Home {
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* css de formulaire */
+.Formulaire-PartiFormulaire {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow-y: scroll;
+}
+
+
+.TitreFormulaire {
+
+    font-family: 'Istok Web';
+    font-weight: bold;
+    font-size: 3vw;
+    line-height: 62px;
+    text-align: center;
+
+    color: #B4B4B4;
+
+    margin-top: 1vh;
+    margin-bottom: 0;
+
+    padding-left: 5vw;
+}
+
+
+.Formulaire-Inscription h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-family: 'Istok Web';
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+}
+
+
+
+.Formulaire-SignIn-Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.Formulaire-Inscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    height: 80%;
+    margin-left: 25px;
+}
+
+.Formulaire-NomPrenom,
+.Formulaire-UsernameBirthday {
+    display: flex;
+    gap: 3vw;
+
+}
+
+
+#Email,
+#Password,
+#PasswordConfirm {
+    width: 30.5vw;
+    height: 3vh;
+    background: none;
+    border: 2px solid #B4B4B4;
+    border-radius: 15px;
+    padding: 13px;
+    font-family: 'Istok Web';
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 24px;
+    color: #B4B4B4;
+
+}
+
+.GoogleLogo {
+    width: 2vw;
+    height: 2vh;
+
+}
+
+
+#Nom,
+#Prenom,
+#Username,
+#Birthday {
+    width: 13vw;
+    height: 3vh;
+    background: none;
+    border: 2px solid #B4B4B4;
+    border-radius: 15px;
+    padding: 13px;
+    font-family: 'Istok Web';
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 24px;
+    color: #B4B4B4;
+
+}
+
+
+
+.Formulaire-Inscription input {
+    outline: none;
+    border: none;
+    /* Si tu as une bordure spécifique, tu peux aussi la supprimer */
+}
+
+
+
+
+.BoutonsDeSoumission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 4vh;
+    margin-left: 20px;
+
+    padding-bottom: 5%;
+}
+
+
+.Container-Bouton-SignIn {
+    width: 21vw;
+    height: 6vh;
+    border: #A68528 2px solid;
+    border-radius: 18px;
+}
+
+
+
+.Button-SignIn {
+    width: 100%;
+    height: 100%;
+    background: #A68528;
+    border-radius: 15px;
+    font-family: 'Istok Web';
+    font-weight: normal;
+    font-size: 1.50vw;
+    letter-spacing: 3%;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+
+    padding: 0px;
+}
+
+
+
+.Containter-Bouton-SignIn-WithGoogle {
+    width: 21vw;
+    height: 6vh;
+    border: #A68528 2px solid;
+    border-radius: 15px;
+
+}
+
+
+
+.Button-SignIn-Google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    width: 100%;
+    height: 100%;
+    background: none;
+
+    border: none;
+    cursor: pointer;
+
+    margin: 0;
+
+    padding: 0px;
+
+}
+
+
+
+.Button-SignIn-Google p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Istok Web';
+    font-weight: normal;
+    font-size: 1.60vw;
+    letter-spacing: 3%;
+    color: #ffffff;
+}
+
+
+.Lien-Connexion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: 'Istok Web';
+    font-weight: normal;
+    color: #A68528;
+    text-decoration: none;
+
+}
+
+
+
+.Lien-Connexion:hover {
+    text-decoration: underline;
+}
+
+
+/***************************************************************/
+/*********************** CSS Proposition ***********************/
+/***************************************************************/
+
+
+
+.Formulaire-SignIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.Formulaire-PartiProposition {
+
+    width: 50%;
+    display: flex;
+
+    background-color: #252B36;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+/* Formulaire Police instruction */
+
+
+.TitrePrincipale,
+.TitreSecondaire {
+    font-family: 'Istok Web', sans-serif;
+    color: #ffffff;
+    /* Couleur rouge au survol */
+}
+
+
+.TitrePrincipale {
+    display: flex;
+    font-size: 1vw;
+
+}
+
+
+.TitreSecondaire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+
+}
+
+
+.TitreSite {
+    color: #A68528;
+}
+
+
+
+
+/*Image proposition  */
+
+
+
+.ListePropositionEnFond1,
+.ListePropositionEnFond2,
+.ListePropositionEnFond3 {
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    /* Assure que les images restent devant le fond */
+    ;
+
+}
+
+.ListePropositionEnFond1 {
+    margin-top: -8px;
+}
+
+.ListePropositionEnFond2 {
+    margin-top: -12vh;
+}
+
+.ListePropositionEnFond3 {
+    margin-top: -4vh;
+}
+
+.FilmProposition {
+    height: 320px;
+    width: 235px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+
+
+
+/* Ordre de z-index*/
+
+
+.Formulaire-SignIn-Fond {
+    top: 0%;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #141A28 58.6%, #062230 100%);
+    position: fixed;
+
+    overflow: hidden;
+    display: flex;
+    z-index: 1;
+    /* Fond normal derrière tout */
+
+
+}
+
+
+.TitreAccueil {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    height: 150px;
+    margin-top: 35vh;
+    margin-left: 3vh;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    z-index: 3;
+    /* ou plus */
+}
+
+
+
+.ListePropositionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 35px;
+    z-index: 1;
+    padding: 9px;
+    opacity: 0.4;
+
+}
+
+.Formulaire-SignIn-FondOpac {
+    background: rgba(0, 0, 0, 0.48);
+    position: absolute;
+    /* Cela le place sur toute la zone de son parent */
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    /* Fond opaque devant le fond normal */
+
+}
+
+
+
+
+/***************************************************************/
+/********************* Pour du responsive **********************/
+/***************************************************************/
+
+
+
+
+@media (max-width: 425px) {
+    .Formulaire-PartiProposition {
+        display: none;
+    }
+
+    .Formulaire-PartiFormulaire {
+        width: 100%;
+    }
+
+        #Nom,
+        #Prenom,
+        #Username,
+        #Birthday {
+            width: 27vw;
+            height: 4vh;
+            font-size: 3.5vw;
+        }
+
+
+    #Email,
+    #Password,
+    #PasswordConfirm {
+        width: 63vw;
+        height: 2vh;
+        font-size: 4vw;
+        padding: 24px;
+    }
+
+    .Formulaire-Inscription h2 {
+        font-size: 4vw;
+    }
+
+
+    .TitreFormulaire {
+        font-size: 6.5vw;
+        padding-left: 38px;
+    }
+
+
+    .TitreBouton {
+        width: 98vw;
+    }
+
+
+    .Container-Bouton-SignIn,
+    .Containter-Bouton-SignIn-WithGoogle {
+        width: 53vw;
+        height: 7vh;
+        font-size: 6.5vw;
+    }
+
+    .Button-SignIn {
+        font-size: 6.5vw;
+        padding: 0px;
+    }
+
+    .Button-SignIn-Google p {
+        font-size: 3.5vw;
+        padding: 0px;
+    }
+
+    .GoogleLogo {
+        width: 4vw;
+        height: 4vh;
+    }
+
+
+    .Button-SignIn-Google {
+        gap: 2.5vw;
+    }
+
+    .Formulaire-UsernameBirthday, .Formulaire-NomPrenom
+    {
+        gap: 7vw;
+    }
+}

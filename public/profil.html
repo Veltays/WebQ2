@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Tier List</title>
+    <link rel="icon" href="./img/Film/Logo.png" type="image/png">
+    <link rel="stylesheet" href="./css/Profil/stylehead.css">
+    <link rel="stylesheet" href="./css/Profil/stylemain.css">
+    <link rel="stylesheet" href="./css/Profil/circle.css">
+    <link rel="stylesheet" href="./css/Profil/Lcircle.css">
+    <link rel="stylesheet" href="./css/FilmWatcher/Footer.css">
+    <link rel="stylesheet" href="./css/Profil/modif.css">
+    <link rel="stylesheet" href="./css/Profil/modif2.css">
+    <link rel="stylesheet" href="./css/FilmWatcher/FilmCard.css">
+
+    <script type="module" src="./js/Controller/Profil/profilAppController.js"></script>
+    <!-- <script type="module" src ="./js/TestUsr.js"></script> -->
+</head>
+
+<body>
+    <header class="profile-header">
+        <!-- Image de bannière -->
+        <div>
+            <img src="" alt="Bannière du profil" class="banner">
+        </div>
+        <img src="img/Profil/arrow.png" alt="Btn-retour" class="back" id="back-btn">
+        <button class="deconnexion" id="deconnexion">
+            Déconnexion
+        </button>
+        <div class="profile-header-content">
+            <div class="profile-info">
+                <!-- Image de profil -->
+                <div>
+                    <img src="" alt="Photo de profil" class="profile-picture">
+
+                </div>
+                <!-- Nom d'utilisateur -->
+                <div class="profile-text">
+                    <div class="username">
+                        <p></p>
+                    </div>
+                    <!-- Description du profil -->
+                    <div class="abo">
+                        <p></p>
+                        <P></P>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- Bouton Modifier le profil -->
+                <a href="#" class="edit-profile" id="edit-profile">
+                    Modifier le profil <img src="img/Profil/Icon.png" alt="Bannière du profil" class="icon">
+                </a>
+
+                <div class="modal hidden">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>édition</h3>
+                        <input id="new-pseudo" type="text" placeholder="Entrez votre nouveau pseudo">
+                        <div class="edit-section">
+                            <div class="edit-box" id="new-profilpic">
+                                <h4>Photo de profil</h4>
+                                <div class="icon-circle">
+                                    <img src="img/Profil/Icon.png" alt="Modifier la photo de profil">
+                                </div>
+                            </div>
+                            <div class="edit-box" id="new-banner">
+                                <h4>Bannière</h4>
+                                <div class="icon-circle">
+                                    <img src="img/Profil/Icon.png" alt="Modifier la bannière">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="save-button">Sauvegarder</button>
+                    </div>
+                </div>
+                <input type="file" id="fileInputProfilPic" style="display:none;" accept="image/*">
+                <input type="file" id="fileInputBanner" style="display:none;" accept="image/*">
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-stat">
+            <div class="te-total">
+                <p>Temps d'écran total:</p>
+                <p>00 jours 00 heures 00 minutes</p>
+            </div>
+            <div class="te">
+                <!-- 🔹 FILMS -->
+                <div class="te-film">
+                    <p>Temps passé devant des films:</p>
+
+                    <!-- Cercle principal -->
+                    <div class="cprocent">
+                        <div class="inner">
+                            <div id="number1">
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <svg width="250" height="250">
+                            <circle id="big-film" cx="125" cy="125" r="110" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Petits cercles -->
+                    <div class="te-details-film">
+                        <div class="little-circle">
+                            <div class="Lcprocent">
+                                <div class="Linner">
+                                    <div id="number2">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <svg width="160" height="160">
+                                    <circle id="little1" class="little progress" cx="80" cy="80" r="70"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div id="number">
+                                <p>Jours</p>
+                            </div>
+                        </div>
+
+                        <div class="little-circle">
+                            <div class="Lcprocent">
+                                <div class="Linner">
+                                    <div id="number3">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <svg width="160" height="160">
+                                    <circle id="little2" class="little progress" cx="80" cy="80" r="70"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div id="number">
+                                <p>Heures</p>
+                            </div>
+                        </div>
+
+                        <div class="little-circle">
+                            <div class="Lcprocent">
+                                <div class="Linner">
+                                    <div id="number4">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <svg width="160" height="160">
+                                    <circle id="little3" class="little progress" cx="80" cy="80" r="70"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div id="number">
+                                <p>Minutes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nb-film-vu">
+                        <p>Nombre de films vus:</p>
+                        <p class="font-film-vu" id="nbfilmvu">726</p>
+                    </div>
+                </div>
+
+                <!-- 🔸 SÉRIES -->
+                <div class="te-film">
+                    <p>Temps passé devant des séries:</p>
+
+                    <!-- Cercle principal -->
+                    <div class="cprocent">
+                        <div class="inner">
+                            <div id="number5">
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <svg width="250" height="250">
+                            <circle id="big-serie" cx="125" cy="125" r="110" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Petits cercles -->
+                    <div class="te-details-film">
+                        <div class="little-circle">
+                            <div class="Lcprocent">
+                                <div class="Linner">
+                                    <div id="number6">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <svg width="160" height="160">
+                                    <circle id="little4" class="little progress" cx="80" cy="80" r="70"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div id="number">
+                                <p>Jours</p>
+                            </div>
+                        </div>
+
+                        <div class="little-circle">
+                            <div class="Lcprocent">
+                                <div class="Linner">
+                                    <div id="number7">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <svg width="160" height="160">
+                                    <circle id="little5" class="little progress" cx="80" cy="80" r="70"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div id="number">
+                                <p>Heures</p>
+                            </div>
+                        </div>
+
+                        <div class="little-circle">
+                            <div class="Lcprocent">
+                                <div class="Linner">
+                                    <div id="number8">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <svg width="160" height="160">
+                                    <circle id="little6" class="little progress" cx="80" cy="80" r="70"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div id="number">
+                                <p>Minutes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nb-film-vu">
+                        <p>Nombre d'épisodes vus:</p>
+                        <p class="font-film-vu" id="nbserievu">123</p>
+                    </div>
+                </div>
+            </div>
+            <div class="list-place">
+            </div>
+            <div>
+                <a href="#" class="btn-creer-liste" id="btn-creer-liste">
+                    Créer une liste <img src="img/Profil/arrow.png" alt="btn-modif" class="icon2">
+                </a>
+            </div>
+            <div class="modal2 hidden">
+                <div class="modal-content2">
+                    <span class="close2">&times;</span>
+                    <input id="new-list-name" type="text" placeholder="Entrez le nom de la nouvelle liste">
+                    <button class="save-button2">Sauvegarder</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="elemFooter">
+            <ul class="LogoReseau">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=61562973150124">
+
+                        <img src="./img/Footer/Frame-4.png" alt="Logo Facebook" class="LogoFacebook" class="LogoReseau">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/gran-yassine-9453b6340">
+                        <img src="./img/Footer/Frame-3.png" alt="Logo Linkedin" class="LogoLinkedin" class="LogoReseau">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/ysne.grn/">
+                        <img src="./img/Footer/Frame-1.png" alt="Logo Instagram" class="LogoInstagram"
+                            class="LogoReseau">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/Veltays">
+                        <img src="./img/Footer/Frame.png" alt="Logo Twitter" class="LogoTwitter" class="LogoReseau">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Veltays">
+                        <img src="./img/Footer/Frame-2.png" alt="Logo Git" class="LogoGit" class="LogoReseau">
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul class="imgPresentation">
+                <a href="https://www.hepl.be/" target="_blank">
+                    <img src="./img/Footer/HEPL_new_2-removebg-preview 1.png" alt="Logo HEPL" class="LogoHEPL">
+                </a>
+            </ul>
+
+            <ul class="TexteFooter">
+                <li class="TexteElem">
+                    <a href="MainFilm.html" class="LienHome">
+                        Home
+                    </a>
+                </li>
+                <li class="TexteElem">
+                    <a class="LienAbout">
+                        About
+                    </a>
+                </li>
+
+                <li class="TexteElem">
+                    <a class="LienService">
+                        Service
+                    </a>
+                </li>
+                <li class="TexteElem">
+                    <a class="LienTeams">
+                        Teams
+                    </a>
+                </li>
+
+                <li class="TexteElem">
+                    <a href="mailto:granyassinepro@gmail.com" class="LienMail">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.ButtonAjouterListe:hover {
+    background-color: #FFC94A;
+    color: #07212F;
+    border-color: #FFC94A;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    background-color: #06202E;
+    border: 2px solid #FFC94A;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 300px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    color: white;
+    font-family: 'Istok Web', sans-serif;
+    max-height: 300px;           /* Hauteur max visible */
+    overflow-y: auto;            /* Scroll vertical si besoin */
+    scrollbar-width: thin;       /* Scroll discret (pour Firefox) */
+    scrollbar-color: #81807e transparent; /* Couleur du scroll */
+  }
+  
+  .menu-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .liste-item {
+    margin-top: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #ffc107;
+    border: 1px solid #ffc107;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Istok Web', sans-serif;
+  }
+  
+  .liste-item:hover {
+    background-color: #ffc107;
+    color: #07212F;
+    .plus-icon {
+      color: #07212F;
+    }
+  }
+  
+  .plus-icon {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFC94A;
+  }
+
+  .liste-dropdown {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }

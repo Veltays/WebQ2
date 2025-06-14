@@ -1,0 +1,239 @@
+section {
+
+    margin-left: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Fixer la largeur au viewport */
+    margin-top: 50px;
+
+}
+
+.ListeDeFilm{
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    margin-left: 20px;
+    overflow-x: auto; /* Permet le scroll horizontal */
+    overflow-y: hidden; /* Permet le scroll horizontal */
+    scroll-behavior: smooth; /* Ajoute un effet de défilement fluide */
+    max-width: 95%; /* Empêche de dépasser l'écran */
+    padding-bottom: 15px; /* Optionnel : éviter le cut-off du scrollbar */
+    
+    scrollbar-width: 4px; /* Pour Firefox */
+    scrollbar-color: #B8B8B8 transparent; /* Pour Firefox */
+}
+
+.list-place {
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth; /* Ajoute un effet de défilement fluide */
+    max-width: 100%; /* Empêche de dépasser l'écran */
+    padding-bottom: 15px; /* Optionnel : éviter le cut-off du scrollbar */
+}
+
+.FilmCard:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1); /* Agrandit légèrement la carte au survol */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2); /* Ajoute une ombre portée */
+}
+.FilmCard img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;    /* Assure que l'image s'adapte à la taille de la carte */
+}
+
+.TitreListe {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: start;
+    margin-left: 2%;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-underline-offset: 8px; /* Ajuste la distance du soulignement */
+
+}
+
+.IndexOfPage {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: fit-content; /* Ajuste la largeur au contenu */
+    margin-left: 40%;
+}
+
+.IndexOfPage div:hover {
+    cursor: pointer;
+    background-color: #FFC700;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2); /* Agrandit légèrement la carte au survol */
+    transform: rotate(-2deg); /* Légère rotation pour un effet dynamique */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2); /* Ajoute une ombre portée */
+}
+
+.IndexOfPage div {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: #232935;
+}
+
+
+#indexActive {
+    background-color: #FFC700;
+}
+
+
+.BtnSuite {
+    height: 113px;
+    width: 38px;
+    z-index: 1000;
+    position: relative;
+}
+
+.LienMail, .LienHome, .LienAbout, .LienService, .LienTeams {
+    color: inherit;
+    text-decoration: none;
+}
+
+.LienMail:hover, .LienHome:hover ,.LienAbout:hover, .LienService:hover,.LienTeams:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+    .ListeDeFilm {
+        gap: 10px;
+    }
+    .FilmCard {
+        width: 150px;
+        height: 225px;
+    }
+    .FilmCard {
+        width: 150px;
+        height: 225px;
+        border-radius: 10px;
+    }
+    .TitreListe {
+        font-size: 32px;
+    }
+}
+
+
+
+.CardBtn {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.FilmCard:hover .CardBtn {
+    opacity: 1;
+}
+
+
+.FilmCard {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    border-radius: 19px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    border: 3px solid #141A28;
+
+    opacity: 0;
+    animation: apparition 0.5s ease-out forwards;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.Card {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.Card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.CardBtn {
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    margin-top: 150px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    pointer-events: none;
+    /* Empêche toute interaction sauf sur les boutons */
+
+    background-color: rgba(23, 29, 43, 0.6);
+
+}
+
+.CardBtn button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    pointer-events: all;
+    /* Réactive les événements juste sur les boutons */
+}
+
+.CardBtn img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.CardBtn img:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+@media screen and (max-width: 425px) {
+    .ListeDeFilm {
+        gap: 5px;
+    }
+
+    .FilmCard {
+        width: 180px;
+        height: 280px;
+    }
+
+    .TitreListe {
+        font-size: 20px;
+    }
+
+    .Section {
+        margin-left: 2%;
+    }
+
+    .main{
+            width: 100%;
+    }
+}

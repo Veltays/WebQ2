@@ -1,0 +1,83 @@
+.loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(42, 42, 41);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    z-index: 1000;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.Element {
+    display: none;
+}
+
+
+.spinner {
+ height: 100vh;
+ width: 100vw;
+ font-size: 18px;
+ font-weight: 600;
+ font-family: monospace;
+ letter-spacing: 1em;
+ color: #f5f5f5;
+ filter: drop-shadow(0 0 10px);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.spinner span {
+ animation: loading6454 2.5s ease infinite;
+}
+
+.spinner span:nth-child(2) {
+ animation-delay: 0.15s;
+}
+
+.spinner span:nth-child(3) {
+ animation-delay: 0.30s;
+}
+
+.spinner span:nth-child(4) {
+ animation-delay: 0.50s;
+}
+
+.spinner span:nth-child(5) {
+ animation-delay: 0.95s;
+}
+
+.spinner span:nth-child(6) {
+ animation-delay: 1.10s;
+}
+
+.spinner span:nth-child(7) {
+ animation-delay: 1.35s;
+}
+.spinner span:nth-child(8) {
+ animation-delay: 1.50s;
+}
+.spinner span:nth-child(9) {
+ animation-delay: 1.65s;
+}
+.spinner span:nth-child(10) {
+ animation-delay: 1.80s;
+}
+
+@keyframes loading6454 {
+ 0%, 100% {
+  transform: translateY(0);
+ }
+
+ 50% {
+  transform: translateY(-10px);
+ }
+}

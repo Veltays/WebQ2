@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/Film/Logo.png" type="image/png">
+    <link rel="stylesheet" href="./css/SignIn/PartieFomulaire.css">
+    <script  type="module" src="./js/Controller/Form/formAppController.js" ></script>
+
+    <title>Sign In</title>
+</head>
+
+<body>
+    <div class="Formulaire-SignIn">
+        <div class="Formulaire-SignIn-Fond">
+            <div class="Formulaire-PartiProposition">
+                <div class="Formulaire-SignIn-FondOpac">
+                    <div class="ListePropositionContainer">
+                    </div>
+
+                    <div class="TitreAccueil">
+                        <div class="TitrePrincipale">
+                            <h1>Bienvenue sur&nbsp</h1>
+                            <h1 class="TitreSite">TvWatcher&nbsp</h1>
+
+                            <h1>!</h1>
+
+                        </div>
+
+                        <div class="TitreSecondaire">
+                            <h2>Découvre de nouveaux films et séries avec une touche de gamification.</h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="Formulaire-PartiFormulaire">
+                <div class="TitreBouton">
+            
+                    <button type="button" class="Button-Return-Home ">
+                        <img src="./img/Film/FlecheRetour.png" alt="Bouton Retour" class="boutonRetour">
+                    </button>
+                    
+                    <h1 class="TitreFormulaire">S'inscrire</h1>
+
+                    <img>
+                        <img src="./img/Film/Logo.png" alt="Logo" class="LogoFormulaire">
+                    </img>
+                </div>
+                <form class="Formulaire-SignIn-Form">
+                    <div class="Formulaire-Inscription">
+
+                        <div class="Formulaire-NomPrenom">
+                            <div class="Formulaire-Nom">
+                                <h2>Nom</h2>
+                                <input type="text" name="Nom" id="Nom" placeholder="Nom" required>
+                                <p class="ErrorFormNom">Le nom ne doit contenir que des lettres.</p>
+                            </div>
+
+
+                            <div class="Formulaire-Prénom">
+                                <h2>Prénom</h2>
+                                <input type="text" name="Prenom" id="Prenom" placeholder="Prénom" required>
+                                <p class="ErrorFormPrenom">Le Prénom ne doit contenir que des lettres.</p>
+                            </div>
+                        </div>
+
+                        <div class="Formulaire-UsernameBirthday">
+
+                            <div class="Formulaire-Username">
+                                <h2>Nom d'utilisateur</h2>
+                                <input type="text" name="Username" id="Username" placeholder="Nom d'utilisateur" required>
+                                <p class="ErrorFormPseudo">Pseudo ne doit contenir que des lettres, chiffres ou underscores.</p>
+                            </div>
+
+                            <div class="Formulaire-Birthday">
+                                <h2>Date De Naissance</h2>
+                                <input type="date" name="Birthday" id="Birthday" placeholder="Date de naissance" required>
+                                <p class="ErrorFormBirthday"> </p>
+                            </div>
+                        </div>
+
+
+                        <div class="Formulaire-Email">
+                            <h2>Adresse e-mail</h2>
+                            <input type="email" name="Email" id="Email" placeholder="Adresse e-mail" required>
+                            <p class="ErrorFormEmail">Email invalide. Veuillez entrer une adresse email valide.</p>
+                  
+                        </div>
+
+                        <div class="Formulaire-Password">
+                            <h2>Mot de passe</h2>
+                            <input type="password" name="Password" id="Password" placeholder="Mot de passe" required>
+                            <p class="ErrorFormPassword">Mot de passe invalide. Il doit contenir au moins 8 caractères, une lettre et un chiffre.</p>
+                        </div>
+
+                        <div class="Formulaire-ConfirmPassword">
+                            <h2>Confirmer le mot de passe</h2>
+                            <input type="password" name="Password" id="PasswordConfirm" placeholder="Confirmer le Mot de passe" required>
+                            <p class="ErrorFormConfPassword">Les mots de passe ne correspondent pas.</p>
+                   
+                        </div>
+
+                    </div>
+                </form>
+
+                <div class="BoutonsDeSoumission">
+                    <div class="Container-Bouton-SignIn">
+                        <button type="submit" class="Button-SignIn" form="Formulaire-SignIn-Form">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="Containter-Bouton-SignIn-WithGoogle">
+                        <button type="button" class="Button-SignIn-Google" id="Button-google">
+                            <img src="./img/Film/GoogleLogo.svg" alt="Google" class="GoogleLogo">
+                            <p>S'inscrire avec Google </p>
+                        </button>
+                    </div>
+
+                    <div class="AlreadyAccount">
+                        <a href="./login.html" class="Lien-Connexion">Vous avez déjà un compte ?</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+</body>
+
+</html>

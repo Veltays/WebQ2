@@ -1,0 +1,185 @@
+/***** 🎯 CONTENEUR PRINCIPAL *****/
+.te {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 30px;
+}
+
+.te-film {
+  background-color: #0f1c27;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 441px;
+  width: 100%;
+}
+
+/***** 🟨 TITRES ET TEXTES *****/
+.te-film p {
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.nb-film-vu p {
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/***** 🔘 GRAND CERCLE (TEMPS TOTAL) *****/
+.cprocent {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.inner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+  position: relative;
+  z-index: 2;
+}
+
+#number1, #number5 {
+  font-weight: 600;
+  color: #A9A9A9;
+  font-size: 24px;
+}
+
+#big-film, #big-serie {
+  fill: none;
+  stroke: #A68528;
+  stroke-width: 20px;
+  transition: stroke-dashoffset 1s ease;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+/***** 🌀 PETITS CERCLES (Jours / Heures / Minutes) *****/
+.te-details-film {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 300px;
+}
+
+.te-details-film > :nth-child(2) {
+  margin-top: 200px;
+}
+
+.little-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Lcprocent {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.Linner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  position: relative;
+  z-index: 2;
+}
+
+/***** ✅ CERCLAGE SVG *****/
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+/***** 🟡 CERCLE ACTIF (JS) *****/
+circle.progress {
+  stroke: #d4af37;
+  stroke-width: 5px;
+  transition: stroke-dashoffset 1s ease;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+/***** 🏷️ TEXTES INTÉRIEURS *****/
+#number2, #number3, #number4,
+#number6, #number7, #number8 {
+  font-weight: 600;
+  color: #A9A9A9;
+  font-size: 20px;
+}
+
+.little-circle #number {
+  margin-top: 5px;
+  color: #A9A9A9;
+  font-weight: 500;
+}
+
+
+/***** 🔘 STYLE DE BASE POUR TOUS LES CERCLES SVG *****/
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+circle {
+  fill: none;
+  stroke: #2b3a4a;
+}
+
+/***** 🟡 CERCLE DE PROGRESSION ACTIF *****/
+circle.progress {
+  stroke: #d4af37;
+  stroke-width: 10px; 
+  transition: stroke-dashoffset 1s ease;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+/***** 🔘 GRAND CERCLE CENTRAL (heures totales) *****/
+#big-film,
+#big-serie {
+  stroke-width: 20px;
+  stroke: #d4af37;
+  fill: none;
+  transition: stroke-dashoffset 1s ease;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+/***** 🌀 PETITS CERCLES (Jours / Heures / Minutes) *****/
+.Lcprocent,
+.Linner,
+.little-circle {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none;
+}
+
+
+#little1 { stroke: #102D5B; }
+#little2 { stroke: #5D8A97; }
+#little3 { stroke: #9BA2B2; }
+#little4 { stroke: #102D5B; }
+#little5 { stroke: #5D8A97; }
+#little6 { stroke: #9BA2B2; }

@@ -1,0 +1,883 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body
+{
+    background-color:#141A28;    /* Couleurs de fond*/
+    width:100vw ; 
+    overflow-x: hidden;
+    
+}
+
+
+
+/****************************************/
+/*            Element Header            */
+/****************************************/
+
+
+header{
+    height: 90px;
+    margin-right: 15px;
+    padding: 1%;                /* Met une couche d'écart entre la limite et lui */
+    background: rgba(0, 0, 0, 0.4);  /* Met un fond en noir */
+    border-radius: 25px;                /* Met des coté arrondi a ce fond */
+    display: flex;                      /* Permet de mettre les éléments en ligne */
+    justify-content: space-between;     /* Permet d'espacer les éléments */
+    align-items: center;                /* Permet de centrer les éléments */
+    z-index: 1000;
+    position: sticky;
+    top: 5px;
+}
+
+
+.Logo{
+    height: 80px;            
+    width: 87px;
+    padding-bottom: 10px;     
+    padding-right: 50px;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.ButtonOfSuggestion
+{
+    display: flex; 
+    align-items: center;
+    gap : 30px                           /*Met un espace entre les éléments */
+}
+
+.IconOfRedirection
+{
+
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    gap : 50px
+}
+
+.ButtonTexte{
+    font-family: 'Istok Web', sans-serif; /* Met la police de caractère */
+    font-style:bold;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 19px;
+    color: #FFFFFF;
+
+    text-decoration: none;               /* Enlève le soulignement du texte */
+
+}
+
+.LienTitre{
+    text-decoration: none;               /* Enlève le soulignement du texte */
+
+}
+
+.ButtonTexte:hover{
+    color: #FFBB00;
+    font-size: 26px;
+    transform: rotate(1deg);
+}
+
+
+
+.ButtonActive{
+    color: #FFBB00;
+    text-decoration-line:underline;            /*Met un effet de surlignage */
+}
+
+.ProfilButton{
+    margin-right: 50px;
+    margin-left: 40px;
+}
+
+.ProfilButtonImg
+{
+    border-radius: 50%;                  /* Met des bords arrondis */
+    height: 65px;
+    width: 65px;
+
+}
+
+/****************************************/
+/*          Barre de recherche          */
+/****************************************/
+
+.IconRecherche
+{
+    height: 38px;
+    width: 38px;
+    margin-bottom: 3px;
+}
+
+
+.SearchBar
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap : 5px;
+    margin-top: 15px;
+}
+
+#search-button
+{
+    all: unset;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 4px;
+}
+
+#search-input {
+    height: 50px;
+    width: 500px;
+    background-color: rgba(20, 26, 40, 0.2);
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    font-family: 'Inter';
+    font-size: 19px;
+    display: none;
+
+
+}
+
+.SearchBarRow
+{
+    width: 500px;
+    height: 2px;
+    background-color: #FFFFFF;
+    animation: BarreApparition 0.5s ease-in-out forwards;
+
+}
+
+.SearchBarRowDisparition
+{
+    width: 500px;
+    height: 2px;
+    background-color: #FFFFFF;
+    animation: BarreDisparition 0.5s ease-in-out forwards;
+
+}
+
+
+.ElemOfSearch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 5px;
+}
+
+#search-input:focus {
+    outline: none;
+    border: none; /* Si tu as une bordure spécifique, tu peux aussi la supprimer */
+}
+
+.result-list{
+    padding-left: 0;
+}
+
+/****************************************/
+/* Animation pour la barre de recherche */
+/****************************************/
+
+
+
+@keyframes BarreApparition {
+
+    0% {
+        width: 0px; /* Débute avec une largeur de 0 */
+    }
+    100% {
+        width: 500px; /* Se termine à 100% de la largeur de la barre de recherche */
+    }
+}
+
+
+@keyframes BarreDisparition {
+
+    0% {
+        width: 500px; /* Débute avec une largeur de 100% */
+    }
+    100% {
+        width: 0px; /* Se termine à 0% de la largeur de la barre de recherche */
+    }
+}
+
+
+
+
+
+/****************************************/
+/*          Résultat Recherche          */
+/****************************************/
+
+.search-results
+{
+    width: 475px;
+    height: 500px;
+    background: linear-gradient(180deg, rgba(20, 26, 40, 0.97) 0%, rgba(27, 39, 66, 0.97) 47.12%);
+    border-radius: 10px;
+    position: absolute;
+    top: 130px;
+    margin-left: 65px;
+
+
+    scrollbar-width: 4px; /* Pour Firefox */
+    scrollbar-color: #B8B8B8 transparent; /* Pour Firefox */
+    overflow-y: auto; /* Pour activer le défilement vertical si nécessaire */
+
+    scroll-behavior: smooth;
+
+    display: none;
+    /*display: none;*/
+
+}
+
+
+.result-link
+{
+    display: flex;
+    width: 89.5%;
+
+    margin-top: 15px;
+    margin-left: 15px;
+
+    background: linear-gradient(85.73deg, rgba(153, 153, 153, 0.16) 73.95%, rgba(255, 255, 255, 0.16) 100%);
+
+    padding: 10px;
+    
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+
+.result-link:hover
+{
+    background: linear-gradient(85.73deg, rgba(153, 153, 153, 0.16) 9.82%, rgba(255, 255, 255, 0.0496) 100%);
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.result-image{
+    width: 100px;
+    height: 125px;
+    border-radius: 10px;
+}
+
+
+.result-info{
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+
+
+.result-title, .result-date, .result-description{
+    font-family: 'Istok Web', sans-serif;
+    font-style: normal;
+
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+
+.result-title{
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+
+.result-date{
+    font-weight: 400;
+    font-size: 13px;
+    color: #858585;
+    margin-left: 5px;
+}
+
+
+.result-description{
+    font-weight: normal;
+    font-size: 14px;
+    color: #9C9C9C;
+    margin-left: 5px;
+
+}
+
+/****************************************/
+/*        Bouton de notification        */
+/****************************************/
+
+
+
+.NotificationButton {
+    position: relative; /* nécessaire pour positionner .NotifCount */
+    display: inline-block;
+}
+
+.NotificationButtonImg {
+    height: 36px;
+    width: 36px;
+}
+
+
+
+
+.DeleteAllBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.FontDeleteAll{
+        background-color: #D9D9D9;
+        border-radius: 15px;
+        border : 3px solid #890002;
+        width: 60%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+    }
+
+
+.TexteDeleteAll{
+    font-size: 19px;
+    font-family: 'Istok Web';
+    font-weight: bold;
+    color: #1B2742;
+}
+
+.DeleteAllBtnImg{
+    height: 35px;
+    width: 35px;
+    margin-left: 24px;
+    cursor: pointer;
+}
+
+
+
+
+.NotifCount {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    z-index: 1000;
+    background-color: #ff0000;
+    color: #000000;
+    font-weight: bold;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+/***************************************/
+/*        Résultat Notification        */
+/***************************************/
+
+
+#BoutonNotification
+{
+
+    all: unset;
+    cursor: pointer;
+    margin-left: 25px;
+
+}
+
+
+
+.AllNotification
+{
+
+    width: 300px;
+    height: 450px;
+    background: linear-gradient(180deg, rgba(20, 26, 40, 0.97) 0%, rgba(27, 39, 66, 0.97) 47.12%);
+    border-radius: 10px;
+    position: absolute;
+    top: 130px;
+    padding: 15px;
+
+    scrollbar-width: 4px; /* Pour Firefox */
+    scrollbar-color: #B8B8B8 transparent; /* Pour Firefox */
+    overflow-y: auto; /* Pour activer le défilement vertical si nécessaire */
+
+    display: none;
+}
+
+
+.NotificationList
+{
+   text-decoration: none;
+
+    padding-right: 0px;
+    padding-left: 0px;
+    margin: 0px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.infoNotification, .warningNotification, .successNotification , .errorNotification
+{
+    display: flex;
+    
+    height: 105px;
+    width: 100%;
+
+    border-radius: 10px;
+
+
+}
+
+.infoNotification{
+    background: linear-gradient(85.73deg, rgba(67, 162, 210, 0.16) 9.82%, rgba(255, 255, 255, 0.0496) 100%);
+
+}
+
+.warningNotification
+{
+    background: linear-gradient(85.73deg, rgba(226, 127, 5, 0.16) 9.82%, rgba(255, 255, 255, 0.0496) 100%);
+
+}
+
+
+.successNotification 
+{
+    background: linear-gradient(85.73deg, rgba(67, 210, 67, 0.16) 9.82%, rgba(255, 255, 255, 0.0496) 100%);
+}
+
+.errorNotification
+{
+    background: linear-gradient(85.73deg, rgba(210, 67, 67, 0.16) 9.82%, rgba(255, 255, 255, 0.0496) 100%);
+
+}
+
+.TexteNotificationH2, .TexteNotificationP
+{
+    font-family: 'Istok Web', sans-serif;
+
+}
+
+.TexteNotificationH2
+{
+
+    color: #FFFFFF;
+    font-style: bold;
+    font-size: 21px;
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.TexteNotificationP
+{
+
+    color: #9C9C9C;
+    font-style: normal;
+    font-size: 13px;
+    margin: 0;
+
+
+
+}
+
+
+
+.NotificationIcon
+{
+    display: flex;
+    height: 72px;
+    align-items: flex-start;
+    margin: 15px;
+
+}
+
+
+.LogoNotification
+{
+    height: 30px;
+    width: 30px;
+    margin: 0;
+}
+
+
+.AnimationNotification
+{
+    animation: NotificationApparition 0.5s ease-in-out forwards;
+
+}
+
+
+.AnimationNotificationDisparition
+{
+    animation: NotificationDisparition 0.5s ease-in-out forwards;
+}
+
+@keyframes NotificationApparition {
+
+    0% {
+        opacity: 0; /* Débute avec une opacité de 0 */
+    }
+    100% {
+        opacity: 1; /* Se termine à une opacité de 1 */
+    }
+}
+
+
+@keyframes NotificationDisparition {
+
+    0% {
+        opacity: 1; /* Débute avec une opacité de 1 */
+    }
+    100% {
+        opacity: 0; /* Se termine à une opacité de 0 */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .Logo {
+        padding-right: 15px;
+        margin-left: 7px;
+    }
+
+    .ProfilButtonImg {
+        margin-right: -37px;
+        margin-left: -27px;
+
+    }
+
+    #BoutonNotification {
+        margin-left: -21px;
+        margin-right: -20px;
+    }
+
+    .AllNotification {
+        top: 79px;
+        margin-right: 150px;
+        margin-left: -190px;
+    }
+
+    .IconOfRedirection {
+        padding-right: 4px;
+        gap: 45px;
+    }
+
+
+    .NotifCount {
+        right: -16px;
+    }
+
+
+
+    #search-input {
+        width: 180px;
+        /* Réduit la largeur de la barre de recherche */
+        display: none;
+        /* Masque la barre de recherche par défaut */
+        font-size: 15px;
+    }
+
+
+
+    @keyframes BarreApparition {
+
+        0% {
+            width: 0px;
+            /* Débute avec une largeur de 0 */
+        }
+
+        100% {
+            width: 180px;
+            /* Se termine à 100% de la largeur de la barre de recherche */
+            display: block;
+        }
+    }
+
+
+
+    @keyframes BarreDisparition {
+
+        0% {
+            width: 180px;
+            /* Débute avec une largeur de 100% */
+        }
+
+        100% {
+            width: 0px;
+            /* Se termine à 0% de la largeur de la barre de recherche */
+            display: none;
+            padding: 0px;
+            /* Masque la barre de recherche */
+        }
+    }
+
+        #search-results.SearchBarRow {
+            width: 378px !important;
+
+        }
+
+        .search-results{
+            top:114px;
+            margin-left: 48px;
+            padding: 5px;
+        }
+    .result-image{
+
+        width: 70px;
+        height: 90px;
+
+    }
+
+    .result-link{
+        width: 90%;
+        height: 150px;
+        /* Réduit la largeur du lien de résultat */
+        margin-left: 5px;
+        /* Ajuste la marge gauche pour centrer le lien */
+    }
+
+    .result-title{
+        font-size: 21px;
+        /* Réduit la taille de la police du titre */
+        margin-bottom: 2px;
+    }
+
+    .result-date{
+        font-size: 15px;
+        /* Réduit la taille de la police de la date */
+    }
+
+    .result-description{
+        font-size: 13px;
+        /* Réduit la taille de la police de la description */
+    }
+
+    #BarreSousSearch {
+        margin-left: 38px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/****************************************/
+/*        425px                         */
+/****************************************/
+
+
+@media screen and (max-width: 425px) {
+
+    header {
+        height: 79px;
+        margin-right: 11px;
+        margin-left: -5px;
+
+    }
+
+    .Logo {
+        padding-right: 0px;
+        margin-left: 5px;
+        margin-top: 0px;
+        width: 66px;
+        height: 60px;
+    }
+
+    .ProfilButtonImg {
+        margin-right: -45px;
+        margin-left: -30px;
+    }
+
+    .ButtonTexte {
+        font-size: 16px;
+    }
+
+    .IconRecherche {
+        height: 30px;
+        width: 30px;
+        margin-bottom: 6px;
+    }
+
+
+    .NotificationButtonImg {
+        height: 30px;
+        width: 30px;
+    }
+
+    .ProfilButtonImg {
+        margin-right: -14px;
+        margin-left: -10px;
+
+        width: 50px;
+        height: 50px;
+    }
+
+    .ProfilButton {
+        margin-right: 12px;
+        margin-left: 7px;
+    }
+
+    .ButtonOfSuggestion {
+        gap: 13px;
+        /* Réduit l'espace entre les éléments */
+    }
+
+    #BoutonNotification {
+        margin-left: -16px;
+        margin-right: -26px;
+    }
+
+    .FontDeleteAll {
+        width: 73%;
+    }
+
+    .TexteDeleteAll {
+        font-size: 19px;
+        /* Réduit la taille de la police du texte */
+    }
+
+    .AllNotification {
+        top: 75px;
+        margin-right: 147px;
+        margin-left: -183px;
+        width: 232px;
+        height: 322px;
+    }
+
+    .IconOfRedirection {
+        padding-right: 4px;
+        gap: 30px;
+    }
+
+
+    .NotifCount {
+        right: -17px;
+        top: -7px;
+        font-size: 11px;
+    }
+
+
+
+    #search-input {
+        width: 175px;
+        /* Réduit la largeur de la barre de recherche */
+        display: none;
+        /* Masque la barre de recherche par défaut */
+        font-size: 15px;
+    }
+
+
+
+    @keyframes BarreApparition {
+
+        0% {
+            width: 0px;
+            /* Débute avec une largeur de 0 */
+        }
+
+        100% {
+            width: 175px;
+            /* Se termine à 100% de la largeur de la barre de recherche */
+            display: block;
+        }
+    }
+
+    @keyframes BarreDisparition {
+
+        0% {
+            width: 175px;
+            /* Débute avec une largeur de 100% */
+        }
+
+        100% {
+            width: 0px;
+            /* Se termine à 0% de la largeur de la barre de recherche */
+            display: none;
+            padding: 0px;
+            /* Masque la barre de recherche */
+        }
+    }
+
+    #search-results.SearchBarRow {
+        width: 300px !important;
+    }
+
+    .search-results {
+        top: 88px;
+        margin-left: -74px;
+        padding: 5px;
+    }
+    .result-info{
+        margin-left: 35px;
+    }
+    .result-image {
+
+        width: 65px;
+        height: 80px;
+
+    }
+
+    .result-link {
+        width: 90%;
+        height: 150px;
+        /* Réduit la largeur du lien de résultat */
+        margin-left: 5px;
+        /* Ajuste la marge gauche pour centrer le lien */
+    }
+
+    .result-title {
+        font-size: 18px;
+        /* Réduit la taille de la police du titre */
+        margin-bottom: 2px;
+    }
+
+    .result-date {
+        font-size: 15px;
+        /* Réduit la taille de la police de la date */
+    }
+
+    .result-description {
+        font-size: 11px;
+        /* Réduit la taille de la police de la description */
+    }
+
+    #BarreSousSearch {
+        margin-left: 38px;
+    }
+
+
+
+    .ButtonTexte:hover{
+    color: #FFBB00;
+    font-size: 18px;
+    transform: rotate(1deg);
+}
+}

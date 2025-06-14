@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+
+/* Fond pour l'image */
+
+.FondPresentation {
+    height: 100vh;
+    width: 100vw;
+    top: 7px;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    object-fit: cover;
+
+}
+
+/* Fond pour l'image + dégradée*/
+main {
+    margin-top: 50px;
+    margin: -5%;
+    width: 110vw;
+}
+
+.FondPresentationOpac {
+    height: 103vh;
+    width: 110vw;
+    background: linear-gradient(180deg, rgba(20, 26, 40, 0.12) 14.5%, #141A28 89%);
+    z-index: 1;
+    margin-bottom: 30vh;
+
+}
+
+/* Texte + citation*/
+.TextPresentation {
+    border-radius: 10px;
+    margin-left: 10%;
+    padding-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Aligner les éléments */
+
+}
+
+
+.TitreFilmSuggestion {
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 75px;
+    letter-spacing: -0.02em;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 1px;
+    /* Ajout d'un espace contrôlé */
+}
+
+.DescriptionFilmSuggestion {
+    width: 50%;
+    padding-left: 2%;
+    font-family: 'Inria Sans';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    padding-bottom: 10px;
+
+    color: #FFFFFF;
+}
+
+.LienProposition {
+    text-decoration: none;
+
+}
+
+/*Bouton Regarder + Ajouter a ma liste*/
+.ButtonPresentation {
+    margin-left: 10%;
+    width: 450px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+}
+
+
+.ButtonRegarder {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    background: #A68528;
+    border: 2.5px solid #A68528;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+
+
+.ButtonRegarder:hover,
+.AjouterListe:hover {
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    transform: scale(1.05);
+
+}
+
+
+
+.PlayButton {
+
+    height: 30px;
+    width: 24px;
+    margin-top: 14px;
+    margin-right: 10px;
+
+}
+
+
+
+
+
+.ButtonRegarderTexte,
+.ButtonAjouterTexte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    color: #ffffff;
+}
+
+
+.AjouterListe {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    border: 2.5px solid #A68528;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.AddButton {
+    height: 25px;
+    width: 25x;
+    margin-top: 17px;
+    margin-right: 13px;
+    margin-left: 3px;
+}
+
+.PresentationFilm {
+    margin-bottom: 10vh;
+}
+
+
+@media screen and (max-width: 768px) {
+    .TitreFilmSuggestion {
+        font-size: 50px;
+    }
+
+    .FondPresentationOpac {
+        margin-bottom: -7vh;
+    }
+
+    .DescriptionFilmSuggestion {
+        width: 65%;
+        font-size: 20px;
+    }
+
+    .TextPresentation {
+        padding-top: 45%;
+        padding-left: 2%;
+    }
+
+    .PresentationFilm {
+        margin-bottom: 3vh;
+    }
+
+}
+
+
+@media screen and (max-width: 425px) {
+    .TitreFilmSuggestion {
+        font-size: 40px;
+    }
+
+    .FondPresentationOpac {
+        margin-bottom: -18vh;
+    }
+
+    .DescriptionFilmSuggestion {
+        width: 60%;
+        font-size: 13px;
+    }
+
+    .TextPresentation {
+        padding-top: 47%;
+        padding-left: -3%;
+        margin-left: 6%;
+    }
+
+    .PresentationFilm {
+        margin-bottom: 3vh;
+    }
+
+    .ButtonPresentation {
+        justify-content: start;
+        gap: 20px;
+
+    }
+
+    .ButtonRegarder,
+    .AjouterListe {
+        width: 150px;
+        height: 46px;
+    }
+
+
+    .ButtonRegarderTexte,
+    .ButtonAjouterTexte {
+        font-size: 16px;
+    }
+
+    .PlayButton {
+        height: 18px;
+        width: 14px;
+        margin-top: 14px;
+        margin-right: 13px;
+    }
+
+    .AddButton {
+        height: 16px;
+        margin-top: 15px;
+        margin-right: 18px;
+        margin-left: -10px;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 380px) {
+    .FondPresentationOpac {
+        margin-bottom: -27vh;
+
+    }
+
+}

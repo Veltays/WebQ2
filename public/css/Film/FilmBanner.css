@@ -1,0 +1,180 @@
+.TitreImageFilm
+{
+    margin: 0px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    color: #ffffff; /* Couleur rouge au survol */
+    font-size: 55px;
+    margin-left: 90px;
+    margin-top: 50px;
+
+}
+
+
+.ImageFilms{
+    width: 70vw;
+    height: 100%;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+
+.ImageFilm{
+    width: 360px;
+    height: 202px;
+    object-fit: cover;
+    margin-left: 35px;
+    margin-bottom: 35px;
+
+
+
+}
+
+
+
+@media screen and (max-width: 1440px) {
+
+    .TitreImageFilm
+    {
+        
+        margin: 0px;
+        font-family: 'Istok Web', sans-serif;
+        font-weight: bold;
+        color: #ffffff; /* Couleur rouge au survol */
+        font-size: 45px;
+        margin-left: 70px;
+        margin-top: 50px;
+    
+    
+    }
+    
+    
+    .ImageFilms{
+        width: 70vw;
+        height: 100%;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    
+    
+    .ImageFilm{
+        width: 250px;
+        height: 150px;
+        object-fit: cover;
+        margin-left: 35px;
+        margin-bottom: 35px;
+    
+
+    }
+
+}
+@media screen and (max-width: 1024px) {
+
+    .TitreImageFilm
+    {
+        
+        margin: 0px;
+        font-family: 'Istok Web', sans-serif;
+        font-weight: bold;
+        color: #ffffff; /* Couleur rouge au survol */
+        font-size: 35px;
+        margin-left: 60px;
+        margin-top: 50px;
+    
+    
+    }
+    
+    
+    .ImageFilms{
+        width: 70vw;
+        height: 100%;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    
+    
+    .ImageFilm{
+        width: 160px;
+        height: 90px;
+        object-fit: cover;
+        margin-left: 50px;
+        margin-bottom: 35px;
+    
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .TitreImageFilm
+    {
+        
+        margin: 0px;
+        font-family: 'Istok Web', sans-serif;
+        font-weight: bold;
+        color: #ffffff; /* Couleur rouge au survol */
+        font-size: 28px;
+        margin-left: 40px;
+        margin-top: 30px;
+    
+    
+    }
+    
+    
+    .ImageFilms{
+        width: 70vw;
+        height: 100%;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    
+    
+    .ImageFilm{
+        width: 100px;
+        height: 60px;
+        object-fit: cover;
+        margin-left: 30px;
+        margin-bottom: 20px;
+    
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .TitreImageFilm
+    {
+        
+        margin: 0px;
+        font-family: 'Istok Web', sans-serif;
+        font-weight: bold;
+        color: #ffffff; /* Couleur rouge au survol */
+        font-size: 20px;
+        margin-left: 20px;
+        margin-top: 30px;
+    
+    }
+    
+    
+    .ImageFilms{
+        width: 70vw;
+        height: 100%;
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+    
+    
+    .ImageFilm{
+        width: 89px;
+        height: 55px;
+        object-fit: cover;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 1px;
+    
+    }
+}
+
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/Film/Logo.png" type="image/png">
+    <link rel="stylesheet" href="./css/connexion/connexion.css">
+    <script type="module" src="./js/Controller/Login/loginAppController.js"></script>
+
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="Formulaire-SignIn">
+        <div class="Formulaire-SignIn-Fond">
+
+
+            <div class="Formulaire-PartiFormulaire">
+                <div class="TitreBouton">
+
+                    <button type="button" class="Button-Return-Home ">
+                        <img src="./img/Film/FlecheRetour.png" alt="Bouton Retour" class="boutonRetour">
+                    </button>
+
+                    <h1 class="TitreFormulaire">Connexion</h1>
+
+                    <img>
+                    <img src="./img/Film/Logo.png" alt="Logo" class="LogoFormulaire">
+                    </img>
+                </div>
+                <form class="Formulaire-SignIn-Form">
+                    <div class="Formulaire-Inscription">
+
+                        <div class="Formulaire-Email">
+                            <h2>Adresse e-mail ou nom d'utilisateur</h2>
+                            <input type="email" name="Email" id="Email" placeholder="Adresse e-mail" required>
+                        </div>
+
+                        <div class="Formulaire-Password">
+                            <h2>Mot de passe</h2>
+                            <input type="password" name="Password" id="Password" placeholder="Mot de passe" required>
+                        </div>
+
+
+                    </div>
+                </form>
+                <div class="BoutonsDeSoumission">
+                    <div class="Container-Bouton-SignIn">
+                        <button type="submit" class="Button-SignIn" form="Formulaire-SignIn-Form">
+                            Connexion
+                        </button>
+                    </div>
+                    <div class="Containter-Bouton-SignIn-WithGoogle">
+                        <button type="button" id="google-login" class="Button-SignIn-Google">
+                            <img src="./img/Film/GoogleLogo.svg" alt="Google" class="GoogleLogo">
+                            <p>Connexion avec Google</p>
+                        </button>
+                    </div>
+
+                    <div class="AlreadyAccount">
+                        <a href="./signin.html" class="Lien-Connexion">Vous n'avez pas encore de compte ?</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="Formulaire-PartiProposition">
+                <div class="Formulaire-SignIn-FondOpac">
+                    <div class="ListePropositionContainer">
+                    </div>
+
+                    <div class="TitreAccueil">
+                        <div class="TitrePrincipale">
+                            <h1>Bon retour sur sur&nbsp</h1>
+                            <h1 class="TitreSite">TvWatcher&nbsp</h1>
+
+                            <h1>!</h1>
+
+                        </div>
+
+                        <div class="TitreSecondaire">
+                            <h2>Découvre de nouveaux films et séries avec une touche de gamification.</h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Serie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/Serie/SerieMainImage.css">
+    <link rel="stylesheet" href="./css/Serie/SerieArticle.css"> <!-- adapte ça -->
+    <link rel="stylesheet" href="./css/FilmWatcher/Footer.css">
+    <link rel="stylesheet" href="./css/Serie/SerieActeur.css">
+    <link rel="stylesheet" href="./css/Serie/SerieEpisode.css">
+    <script type="module" src="./js/Controller/Serie/serieAppController.js"></script>
+    <link rel="stylesheet" href="./css/Film/listedeliste.css">
+
+    <link rel="icon" href="./img/Film/Logo.png" type="image/png">
+</head>
+
+<body>
+    <main>
+
+        <div class="fondOpac"> </div>
+
+
+
+        <img id="LogoSerie" class="LogoSerie">
+        <img id="BannerSerie" class="SerieBanner" alt="Affiche du Serie">
+        <a href="index.html" class="Btn-retour">
+            <img src="img/Profil/arrow.png" alt="Btn-retour" class="back" id="back-btn">
+        </a>
+
+
+        <div class="AllBtn">
+            <div class="ButtonPresentation">
+                <a href="" class="LienSerie">
+                    <div class="ButtonRegarder">
+                        <img src="./img/Film/play_arrow_filled.png" alt="Bouton de lecture" class="PlayButton" />
+                        <h3 class="ButtonRegarderTexte">Regarder</h3>
+                    </div>
+                </a>
+
+                <div class="ButtonAjouterListe" id="toggleMenu">
+                    <img src="./img/Film/icon+.png" alt="Bouton d'ajout" class="AddButton" />
+                    <h3 class="ButtonAjouterTexte">Ma liste</h3>
+
+                    <div class="dropdown-menu hidden" id="listeMenu">
+                        <h3 class="menu-title">CHOIX</h3>
+                        <ul class="liste-dropdown">
+                            <li class="liste-item">
+                                <span>Nom Liste 1</span>
+                                <span class="plus-icon">+</span>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="YoutubeButton">
+                <img src="./img/Film/YoutubeVector.png" alt="Bouton de trailer" class="YtbButton" />
+            </div>
+
+            <div id="videoContainer" style="display: none;">
+                <iframe id="videoPlayer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <article>
+
+            <aside>
+                <div class="infoTxt">
+                    <h2 class="TextInfo">Détails </h2>
+
+                    <h3 class="TextInfoh3" id="InfoCreateur">
+                        <strong>Créateur :</strong>
+                    </h3>
+                    <h3 class="TextInfoh3" id="InfoAnnee">
+                        <Strong>Année :</Strong>
+                    </h3>
+                    <h3 class="TextInfoh3" id="InfoStudio">
+                        <Strong>Studio : </Strong>
+                    </h3>
+                    <h3 class="TextInfoh3" id="InfoBudget">
+                        <Strong>Budget :</Strong>
+                    </h3>
+                </div>
+                <div class="InfoCasting">
+                    <h2 class="TextInfoCasting">Casting </h2>
+
+                    <ul class="ListeActeur">
+                    </ul>
+
+                </div>
+            </aside>
+
+            <h1 id="Synopsis">Synopsis</h1>
+            <p id="GenreWeb">
+                <strong> Genre :</strong>
+            </p>
+            <p id="SynopsisText"> </p>
+
+
+            <div class="Episode">
+
+                <div class="SelectionSaison">
+                    <select name="Saison" class="BtnSaison" id="ChoixSaison">
+
+                    </select>
+                    <img src="./img/Film/FlecheBas.png" alt="Flèche" class="FlecheBas">
+                </div>
+
+                <ul class="ListeEpisode">
+                  
+                </ul>
+
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="elemFooter">
+            <ul class="LogoReseau">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=61562973150124">
+
+                        <img src="./img/Footer/Frame-4.png" alt="Logo Facebook" class="LogoFacebook" class="LogoReseau">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/gran-yassine-9453b6340">
+                        <img src="./img/Footer/Frame-3.png" alt="Logo Linkedin" class="LogoLinkedin" class="LogoReseau">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/ysne.grn/">
+                        <img src="./img/Footer/Frame-1.png" alt="Logo Instagram" class="LogoInstagram"
+                            class="LogoReseau">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/Veltays">
+                        <img src="./img/Footer/Frame.png" alt="Logo Twitter" class="LogoTwitter" class="LogoReseau">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Veltays">
+                        <img src="./img/Footer/Frame-2.png" alt="Logo Git" class="LogoGit" class="LogoReseau">
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul class="imgPresentation">
+                <a href="https://www.hepl.be/" target="_blank">
+                    <img src="./img/Footer/HEPL_new_2-removebg-preview 1.png" alt="Logo HEPL" class="LogoHEPL">
+                </a>
+            </ul>
+
+            <ul class="TexteFooter">
+                <li class="TexteElem">
+                    <a href="MainFilm.html" class="LienHome">
+                        Home
+                    </a>
+                </li>
+                <li class="TexteElem">
+                    <a class="LienAbout">
+                        About
+                    </a>
+                </li>
+
+                <li class="TexteElem">
+                    <a class="LienService">
+                        Service
+                    </a>
+                </li>
+                <li class="TexteElem">
+                    <a class="LienTeams">
+                        Teams
+                    </a>
+                </li>
+
+                <li class="TexteElem">
+                    <a href="mailto:granyassinepro@gmail.com" class="LienMail">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
+
+
+

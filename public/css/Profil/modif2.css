@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.modal2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  font-family: 'Istok Web', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content2 {
+  background: #07212F;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.modal-content2 input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  border: 1px solid #ffc107;
+  background-color: #061A25;
+  color: white;
+  text-align: center;
+}
+
+.modal-content2 input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.modal-content2 input[type="text"]:focus {
+  border-color: #ffc107;
+}
+
+.close2 {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+.save-button2 {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: transparent;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.save-button2:hover {
+  background-color: #ffc107;
+  color: #07212F;
+}

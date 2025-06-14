@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* Dégradé en fond */
+body {
+    background: linear-gradient(to bottom, #062331 47%, #062331 96%, #141A28 100%); /* Applique un dégradé allant de #062331 à #141A28 du haut vers le bas */
+    flex-direction: column; /* Aligne les éléments enfants en colonne */
+    overflow-x: hidden;
+}
+.back 
+{
+    position: absolute;  /* Sort de la normale du flux */
+    top: 20px;           /* Ajuste la position verticale */
+    left: 20px;          /* Ajuste la position horizontale */
+    width: 30px;         /* Taille réduite */
+    height: auto;
+    cursor: pointer;
+    z-index: 10;         /* Au-dessus des autres éléments */
+    transform: scaleX(-1);
+}
+.deconnexion 
+{
+    position: absolute;  /* Sort de la normale du flux */
+    top: 20px;           /* Ajuste la position verticale */
+    right: 20px;         /* Ajuste la position horizontale */
+    width: auto;         /* Taille réduite */
+    height: auto;
+    cursor: pointer;
+    z-index: 10;         /* Au-dessus des autres éléments */
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #ffc107;
+    border: 1px solid #ffc107;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.deconnexion:hover {
+    background-color: #ffc107;
+    color: #07212F;
+  }
+/*header.css*/
+/*--------------------------------------------------------------*/
+/* Conteneur principal du header */
+.profile-header {
+    width: 100%; /* Prend toute la largeur de l'écran */
+    height: auto; /* Hauteur pour le header */
+    display: flex; /* Utilise le modèle de boîte flexible (Flexbox) pour organiser les éléments à l'intérieur */
+    flex-direction: column; /* Aligne les éléments enfants (bannière et photo de profil) en colonne */
+    z-index: -1; /* Définit l'ordre d'empilement de l'élément, -1 signifie qu'il sera derrière les autres éléments */
+}
+
+.back {
+    position: absolute;  /* Sort de la normale du flux */
+    top: 20px;           /* Ajuste la position verticale */
+    left: 20px;          /* Ajuste la position horizontale */
+    width: 30px;         /* Taille réduite */
+    height: auto;
+    cursor: pointer;
+    z-index: 10;         /* Au-dessus des autres éléments */
+    transform: scaleX(-1);
+  }
+
+/* Bannière */
+.banner {
+    width: 105vw; /* Prend toute la largeur de la fenêtre */
+    height: 500px; /* Définit la hauteur de la bannière*/
+    object-fit: cover; /* Adapte l'image pour qu'elle couvre entièrement l'espace sans la déformer */
+    position: absolute; /* Positionne l'élément relativement à son conteneur parent */
+    left: 0;
+    top: 0;
+    z-index: -1; /* Définit l'ordre d'empilement de l'élément, -1 signifie qu'il sera derrière les autres éléments */
+}
+.profile-header-content {
+    display: flex;
+    justify-content: space-between;
+}
+/* Conteneur pour le texte de profil et l'image de profil */
+.profile-info {
+    display: flex;
+    flex-direction: row; /* Aligne les éléments enfants (image de profil et texte) en ligne */
+    align-items: center; /* Aligne les éléments enfants (image de profil et texte) sur la même ligne */
+    gap: 20px;
+}
+/* Image de profil */
+.profile-picture {
+    width: 350px; /* Définit la largeur de l'image de profil à 100px */
+    height: 350px; /* Définit la hauteur de l'image de profil à 100px */
+    border-radius: 50%; /* Transforme l'image en un cercle en arrondissant les bords à 50% */
+    overflow: hidden; /* Cache les parties de l'image qui débordent du cercle */
+    border: 8px solid #1F242F; /* Ajoute une bordure noire de 4px autour du cercle */
+    margin-top: 320px;
+    margin-left: 4%; /* Ajoute un espacement de 50px à gauche de l'image de profil */
+    object-fit: cover; /* Adapte l'image pour qu'elle couvre entièrement l'espace sans la déformer */
+}
+
+
+
+.profile-text
+{
+    display: flex;
+    flex-direction: column; /* Aligne les éléments enfants (pseudo, abonnements, abonnés) en colonne */
+    margin-top: 435px;
+    height: 250px;
+    justify-content: space-between;
+    width: 400px; /* Prend toute la largeur de l'écran */
+}
+
+/* Pseudo */
+.username {
+    font-size: 74px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Istok Web', sans-serif;
+    height: 120px;
+    width: 400px;
+}
+
+/* Stats (abonnements & abonnés) */
+.abo {
+    display: flex;
+    font-size: 27px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Istok Web', sans-serif;
+    gap: 70px; /* Espacement entre les abonnements et abonnés */
+    width: 500px; /* Prend toute la largeur de l'écran */
+}
+
+/* Bouton Modifier le profil */
+.edit-profile {
+    display: flex;
+    text-decoration: none;
+    font-size: 28px;
+    transition: color 0.3s;
+    color: #A8A8A8;
+    font-family: 'Inria Sans', sans-serif;
+    margin-top: 525px;
+    margin-right: 2%;
+    gap: 10px; /* Espacement entre le texte et l'icône */
+    width: 250px;
+    z-index: 1; /* Définit l'ordre d'empilement de l'élément, 1 signifie qu'il sera au-dessus des autres éléments */
+}
+
+.icon {
+    width: 30px; /* Largeur de l'icône */
+    height: 30px; /* Hauteur de l'icône */
+    color: #A8A8A8; /* Couleur de l'icône */
+}
+
+
+@media (max-width: 1200px) {
+    .profile-picture {
+        width: 300px; /* Largeur de l'image de profil */
+        height: 300px; /* Hauteur de l'image de profil */
+    }
+    .username {
+        font-size: 50px; /* Taille de la police du pseudo */
+    }
+    .abo {
+        font-size: 20px; /* Taille de la police des abonnements et abonnés */
+        gap: 30px; /* Espacement entre les abonnements et abonnés */
+        width: 400px; /* Prend toute la largeur de l'écran */
+    }
+    .profile-text {
+        height: 200px; /* Hauteur du conteneur de texte de profil */
+    }
+    .edit-profile {
+        font-size: 20px; /* Taille de la police du bouton Modifier le profil */
+        margin-top: 500px; /* Marge supérieure du bouton Modifier le profil */
+        margin-right: 5%; /* Marge droite du bouton Modifier le profil */
+    }
+    .icon {
+        width: 25px; /* Largeur de l'icône */
+        height: 25px; /* Hauteur de l'icône */
+    }
+}
+
+@media (max-width: 930px) {
+    .profile-picture {
+        width: 250px; /* Largeur de l'image de profil */
+        height: 250px; /* Hauteur de l'image de profil */
+        margin-top: 355px;
+    }
+    .username {
+        font-size: 40px; /* Taille de la police du pseudo */
+        width: 300px; /* Prend toute la largeur de l'écran */
+        height: 70px;
+    }
+    .abo {
+        font-size: 18px; /* Taille de la police des abonnements et abonnés */
+        gap: 20px; /* Espacement entre les abonnements et abonnés */
+    }
+    .profile-text {
+        height: 150px; /* Hauteur du conteneur de texte de profil */
+        width: 300px; /* Prend toute la largeur de l'écran */
+    }
+    .edit-profile {
+        font-size: 18px; /* Taille de la police du bouton Modifier le profil */
+        margin-top: 500px; /* Marge supérieure du bouton Modifier le profil */
+        width: 170px; /* Largeur du bouton Modifier le profil */
+
+    }
+    .icon {
+        width: 20px; /* Largeur de l'icône */
+        height: 20px; /* Hauteur de l'icône */
+    }
+}
+
+@media (max-width: 775px) {
+    .profile-picture {
+        width: 200px; /* Largeur de l'image de profil */
+        height: 200px; /* Hauteur de l'image de profil */
+        margin-top: 380px;
+    }
+    .username {
+        font-size: 35px; /* Taille de la police du pseudo */
+        width: 250px; /* Prend toute la largeur de l'écran */
+    }
+    .abo {
+        font-size: 16px; /* Taille de la police des abonnements et abonnés */
+        gap: 15px; /* Espacement entre les abonnements et abonnés */
+    }
+    .profile-text {
+        height: 120px; /* Hauteur du conteneur de texte de profil */
+        width: 250px; /* Prend toute la largeur de l'écran */
+    }
+    .edit-profile {
+        font-size: 16px; /* Taille de la police du bouton Modifier le profil */
+        margin-top: 500px; /* Marge supérieure du bouton Modifier le profil */
+        width: 150px; /* Largeur du bouton Modifier le profil */
+    }
+    .icon {
+        width: 18px; /* Largeur de l'icône */
+        height: 18px; /* Hauteur de l'icône */
+    }
+}
+
+@media (max-width: 655px) {
+    .profile-picture {
+        width: 150px; /* Largeur de l'image de profil */
+        height: 150px; /* Hauteur de l'image de profil */
+        margin-top: 405px;
+    }
+    .username {
+        font-size: 30px; /* Taille de la police du pseudo */
+        width: 200px; /* Prend toute la largeur de l'écran */
+    }
+    .abo {
+        font-size: 14px; /* Taille de la police des abonnements et abonnés */
+        gap: 10px; /* Espacement entre les abonnements et abonnés */
+    }
+    .profile-text {
+        height: 100px; /* Hauteur du conteneur de texte de profil */
+        width: 200px; /* Prend toute la largeur de l'écran */
+    }
+    .edit-profile {
+        font-size: 14px; /* Taille de la police du bouton Modifier le profil */
+        margin-top: 500px; /* Marge supérieure du bouton Modifier le profil */
+        width: 130px; /* Largeur du bouton Modifier le profil */
+    }
+    .icon {
+        width: 16px; /* Largeur de l'icône */
+        height: 16px; /* Hauteur de l'icône */
+    }
+}
+
+@media (max-width: 555px) {
+    .profile-picture {
+        width: 100px; /* Largeur de l'image de profil */
+        height: 100px; /* Hauteur de l'image de profil */
+        margin-top: 430px;
+    }
+    .username {
+        font-size: 22px; /* Taille de la police du pseudo */
+        width: 200px; /* Prend toute la largeur de l'écran */
+    }
+    .abo {
+        font-size: 12px; /* Taille de la police des abonnements et abonnés */
+        gap: 5px; /* Espacement entre les abonnements et abonnés */
+    }
+    .profile-text {
+        height: 50px; /* Hauteur du conteneur de texte de profil */
+        width: 200px; /* Prend toute la largeur de l'écran */
+        margin-bottom: 10px;
+    }
+    .edit-profile {
+        font-size: 12px; /* Taille de la police du bouton Modifier le profil */
+        margin-top: 500px; /* Marge supérieure du bouton Modifier le profil */
+        width: 150px; /* Largeur du bouton Modifier le profil */
+    }
+    .icon {
+        width: 14px; /* Largeur de l'icône */
+        height: 14px; /* Hauteur de l'icône */
+    }
+}

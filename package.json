@@ -1,0 +1,41 @@
+{
+  "name": "projet-de-fin-d-ann-e-dev-web-backend-zachary-fallais",
+  "version": "1.0.0",
+  "description": "- **Node.js et Express.js :** Utiliser Express.js pour créer l'API back-end.\r - **JavaScript Vanilla :** Utilisation de JavaScript sans frameworks",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Backend-Assignment-2024-2025/projet-de-fin-d-ann-e-dev-web-backend-zachary-fallais.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Backend-Assignment-2024-2025/projet-de-fin-d-ann-e-dev-web-backend-zachary-fallais/issues"
+  },
+  "homepage": "https://github.com/Backend-Assignment-2024-2025/projet-de-fin-d-ann-e-dev-web-backend-zachary-fallais#readme",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "fetch": "^1.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.15.6"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0"
+  }
+}

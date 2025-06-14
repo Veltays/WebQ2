@@ -1,0 +1,460 @@
+body {
+    overflow-x: hidden;
+    background-color: rgba(20, 26, 40)
+}
+
+main {
+    position: relative;
+}
+.back 
+{
+    position: absolute;  /* Sort de la normale du flux */
+    top: 20px;           /* Ajuste la position verticale */
+    left: 20px;          /* Ajuste la position horizontale */
+    width: 30px;         /* Taille réduite */
+    height: auto;
+    cursor: pointer;
+    z-index: 10;         /* Au-dessus des autres éléments */
+    transform: scaleX(-1);
+}
+
+.LienFilm
+{
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+}
+#BannerFilm {
+    position: absolute;
+    object-fit: cover;
+    /* L'image couvre toute la zone sans déformation */
+    z-index: -2;
+    width: 105%;
+    /* Largeur à 100% de la fenêtre */
+    left: -15px;
+    top: 0;
+    /* Positionnement en haut à gauche de la fenêtre */
+    margin-right: 10%;
+    height: auto; /* Hauteur automatique selon le ratio de l'image */
+    max-height: 135vh;
+    /* Limite la hauteur de l'image à 80% de la hauteur de la fenêtre */
+}
+
+#LogoFilm {
+    width: 64vh;
+    /* Largeur du logo */
+    height: 18vh;
+    /* Hauteur du logo */
+    margin-left: 15px;
+    margin-top: 5vh;
+    z-index: -1;
+    /* Met le logo devant la bannière */
+    object-fit: contain;
+    /* L'image couvre toute la zone sans déformation */
+
+}
+
+.fondOpac {
+    position: absolute;
+    margin-left: -5;
+    top: 0;
+    left: -15px;
+    width: 105%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(6, 35, 49, 0.4) 0.28%, rgba(20, 26, 40, 0.94) 30.4%);
+
+    z-index: -1;
+    /* pour qu’il soit derrière */
+}
+
+
+/*Bouton Regarder + Ajouter a ma liste*/
+.ButtonPresentation {
+    margin-left: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    z-index: 1;
+
+}
+
+
+.ButtonRegarder {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 90px;
+    background: #A68528;
+    border: 2.5px solid #A68528;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.PlayButton {
+    height: 35px;
+    width: 28px;
+    margin-top: 28px;
+    margin-right: 20px;
+}
+
+
+.ButtonAjouterListe {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 90px;
+    border: 2.5px solid #A68528;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.AddButton {
+    height: 30px;
+    width: 30px;
+    margin-top: 29px;
+    margin-right: 20px;
+    margin-left: 3px;
+}
+
+.ButtonRegarderTexte,
+.ButtonAjouterTexte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    color: #ffffff;
+}
+
+
+
+.YtbButton {
+    height: 65px;
+    width: 100px;
+    margin-right: 4vh;
+}
+
+
+.AllBtn {
+    margin-top: 60.5vh;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+#videoContainer{
+    position: absolute;
+    top: 25vh;
+    left: 30vw;
+
+    /* Mettre le conteneur vidéo derrière le reste du contenu */
+}
+/* Pour les écrans de taille maximale 424px */
+
+
+@media screen and (max-width: 1440px) {
+    #BannerFilm {
+        width: 100vw;
+        /* Largeur à 100% de la fenêtre */
+        height: auto;
+        /* Hauteur automatique selon le ratio de l'image */
+        max-height: 80vh;
+        /* Limite la hauteur de l'image à 80% de la hauteur de la fenêtre */
+    }
+
+    #LogoFilm {
+        width: 60vh;
+        /* Largeur du logo */
+        height: 15vh;
+        /* Hauteur du logo */
+        margin-left: 5vw;
+        /* Centrage horizontal */
+        margin-top: 5vh;
+        /* Espacement du haut */
+    }
+
+    .AllBtn {
+        margin-top: 52vh;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ButtonRegarder {
+        display: flex;
+        justify-content: center;
+        width: 250px;
+        height: 70px;
+        background: #A68528;
+        border: 2.5px solid #A68528;
+        border-radius: 10px;
+        text-align: center;
+        font: 18px;
+    }
+
+    .PlayButton {
+        height: 35px;
+        width: 28px;
+        margin-top: 17px;
+        margin-right: 24px;
+    }
+
+
+    .ButtonAjouterListe {
+        display: flex;
+        justify-content: center;
+        width: 250px;
+        height: 70px;
+        border: 2.5px solid #A68528;
+        border-radius: 10px;
+        text-align: center;
+        font: 18px;
+    }
+
+    .AddButton {
+        height: 30px;
+        width: 30px;
+        margin-top: 21px;
+        margin-right: 24px;
+        margin-left: 3px;
+    }
+
+    .YtbButton{
+        height: 60px;
+        width: 90px;
+        margin-right: 4vh;
+    }
+
+
+    #LogoFilm {
+        width: 40vh;
+        /* Largeur du logo */
+        height: 13vh;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+}
+
+/* Pour les écrans de taille maximale 1024px */
+@media screen and (max-width: 1024px) {
+    #BannerFilm {
+        width: 100vw;
+        /* Largeur à 100% de la fenêtre */
+        height: auto;
+        /* Hauteur automatique selon le ratio de l'image */
+        max-height: 60vh;
+        /* Limite la hauteur de l'image à 60% de la hauteur de la fenêtre */
+    }
+
+    #LogoFilm {
+        width: 50vh;
+        /* Largeur du logo */
+        height: 10vh;
+        /* Hauteur du logo */
+        margin-left: 5vw;
+        /* Centrage horizontal */
+        margin-top: 5vh;
+        /* Espacement du haut */
+    }
+
+    .AllBtn {
+        margin-top: 36vh;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ButtonRegarder {
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        height: 60px;
+        background: #A68528;
+        border: 2.5px solid #A68528;
+        border-radius: 10px;
+        text-align: center;
+        font: 9px;
+    }
+
+    .PlayButton {
+        height: 24px;
+        width: 18px;
+        margin-top: 19px;
+        margin-right: 14px;
+    }
+
+
+    .ButtonAjouterListe {
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        height: 60px;
+        border: 2.5px solid #A68528;
+        border-radius: 10px;
+        text-align: center;
+        font: 9px;
+    }
+
+    .AddButton {
+        height: 20px;
+        width: 20px;
+        margin-top: 21px;
+        margin-right: 13px;
+        margin-left: 3px;
+    }
+
+    .YtbButton{
+        height: 42px;
+        width: 65px;
+        margin-right: 4vh;
+        margin-top: 15px;
+    }
+
+
+    #LogoFilm {
+        width: 30vh;
+        /* Largeur du logo */
+        height: 8vh;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+}
+
+/* Pour les écrans de taille maximale 768px */
+@media screen and (max-width: 768px) {
+    #BannerFilm {
+        width: 100vw;
+        /* Largeur à 100% de la fenêtre */
+        height: auto;
+        /* Hauteur automatique selon le ratio de l'image */
+        max-height: 45vh;
+        /* Limite la hauteur de l'image à 45% de la hauteur de la fenêtre */
+    }
+
+    #LogoFilm {
+        width: 40vh;
+        /* Largeur du logo */
+        height: 8vh;
+        /* Hauteur du logo */
+        margin-left: 4vw;
+        /* Centrage horizontal */
+        margin-top: 4vh;
+        /* Espacement du haut */
+    }
+
+    .AllBtn {
+        margin-top: 26.1vh;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ButtonRegarder {
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 40px;
+        background: #A68528;
+        border: 2.5px solid #A68528;
+        border-radius: 10px;
+        text-align: center;
+        font: 9px;
+    }
+
+    .PlayButton {
+        height: 20px;
+        width: 15px;
+        margin-top: 12px;
+        margin-right: 9px;
+        margin-left: 9px;
+    }
+
+
+    .ButtonAjouterListe {
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 40px;
+        border: 2.5px solid #A68528;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .AddButton {
+        height: 18px;
+        width: 18px;
+        margin-top: 13px;
+        margin-right: 8px;
+        margin-left: 4px;
+    }
+
+
+
+    .ButtonRegarderTexte,
+    .ButtonAjouterTexte {
+        font-size: 16px;
+        margin-right: 4px;
+    }
+
+    #LogoFilm {
+        width: 20vh;
+        /* Largeur du logo */
+        height: 6vh;
+        margin-left: 9px;
+        margin-top: 9px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #BannerFilm {
+        width: 110vw;
+        /* Largeur à 100% de la fenêtre */
+        height: auto;
+        /* Hauteur automatique selon le ratio de l'image */
+        max-height: 30vh;
+        /* Limite la hauteur de l'image à 30% de la hauteur de la fenêtre */
+    }
+
+    #LogoFilm {
+        width: 20vh;
+        /* Largeur du logo */
+        height: 7vh;
+        /* Hauteur du logo */
+        margin-left: 0px;
+        /* Centrage horizontal */
+        margin-top: 0px;
+        /* Espacement du haut */
+    }
+
+    .AllBtn {
+        margin-top: 11.5vh;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .YtbButton{
+        height: 35px;
+        width: 50px;
+        margin-right: 1vh;
+        margin-top: 20px;
+    }
+
+
+
+
+}

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+article{
+    margin-top: 70px;
+    position: relative;
+    height: 2000px;
+    width: 105vw;
+    background: linear-gradient(180deg, rgba(6, 35, 49, 0.25) 0.01%, rgba(20, 26, 40, 0.8) 20.4%);
+    left : -15px;
+    
+}
+
+#Synopsis{
+    margin: 0px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    color: #ffffff; /* Couleur rouge au survol */
+    font-size: 70px;
+    margin-left: 55px;
+    margin-bottom: 15px;
+}
+
+#SynopsisText{
+
+    font-family: 'Istok Web', sans-serif;
+    color: #ffffff; /* Couleur rouge au survol */
+    font-weight: regular;
+    font-size: 29px;
+    margin-left: 55px;
+    width: 60vw;
+
+}
+
+#GenreWeb
+{
+    margin: 0px;
+    margin-left: 55px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    color: #ffffff; /* Couleur rouge au survol */
+    font-size: 26px;    
+
+}
+
+
+
+aside{
+    background-color: rgba(35, 41, 53, 0.62); 
+    width: 33vw;
+    z-index: 1;
+    float: right;
+    padding: 30px;
+}
+
+
+.TextInfo, .TextInfoCasting{
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    color: #ffffff; /* Couleur rouge au survol */
+    font-size: 35px;
+
+}
+
+
+.TextInfoCasting
+{
+    margin-top: 100px;
+}
+
+.TextInfoh3{
+
+    margin-left: 18px;
+    font-family: 'Istok Web', sans-serif;
+    color: #ffffff; /* Couleur rouge au survol */
+    font-size: 23px;
+
+}
+
+
+.infoTxt{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.TextInfoReel
+{
+   font-weight: normal;
+    font-size: 21px; 
+    margin-left: 15px;    /* petit espace entre le label et le nom */
+}
+
+
+
+
+/*TO DO 
+- Faire un mediascreen pour le aside qu'il suivent l'image  
+    - également pour le synopsis par conséquent 
+    - Il faudrait aussi lui donner une taille minimum pour qu'il ne soit pas trop petit 
+-   
+*/
+
+
+@media screen and (max-width: 1440px) {
+    article{
+        margin-top: 50px;
+    }
+
+    #Synopsis{
+        font-size: 50px;
+    }
+    
+    #GenreWeb
+    {
+        font-size: 20px;
+    }
+
+    #SynopsisText{
+        font-size: 26px;
+    }
+
+
+    .TextInfo, .TextInfoCasting{
+        margin-top: 3px;
+        font-size: 30px;
+    }
+
+    .TextInfoh3{
+        font-size: 20px;
+
+    }
+    .TextInfoReel{
+        font-size: 18px;
+    }
+
+
+}
+@media screen and (max-width: 1024px) {
+    article{
+        margin-top: 50px;
+    }
+
+    #Synopsis{
+        font-size: 45px;
+    }
+    
+    #GenreWeb
+    {
+        font-size: 19px;
+    }
+
+    #SynopsisText{
+        font-size: 22px;
+    }
+
+
+    .TextInfo, .TextInfoCasting{
+        margin-top: 1px;
+        font-size: 26px;
+    }
+
+    .TextInfoh3{
+        font-size: 19px;
+
+    }
+    .TextInfoReel{
+        font-size: 18px;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    article{
+        margin-top: 20px;
+    }
+
+    #Synopsis{
+        font-size: 40px;
+        margin-left: 30px;
+    }
+    
+    #GenreWeb
+    {
+        font-size: 15px;
+        margin-left: 35px;
+    }
+
+    #SynopsisText{
+        font-size: 17px;
+        margin-left: 40px;
+    
+    }
+
+
+    .TextInfo, .TextInfoCasting{
+        margin-top: 1px;
+        font-size: 22px;
+    }
+
+    .TextInfoh3{
+        font-size: 15px;
+
+    }
+    .TextInfoReel{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    article{
+        margin-top: 10px;
+    }
+
+    aside{
+        padding: 25px;
+    }
+    
+    #Synopsis{
+        font-size: 35px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+    
+    #GenreWeb
+    {
+        font-size: 12px;
+        margin-left: 20px;
+        
+    }
+
+    #SynopsisText{
+        font-size: 8px;
+        margin-left: 25px;
+        width: 230px;
+        margin-right: 0px;
+    
+    }
+
+    .TextInfo, .TextInfoCasting{
+        margin-top: 1px;
+        font-size: 18px;
+        margin-left: -4px;
+    }
+
+    .TextInfoh3{
+        font-size: 13px;
+        margin-left: 0px;
+    }
+    .TextInfoReel{
+        font-size: 10px;
+        margin-left: 0px;
+    }
+
+
+    .TitreImageFilm
+    {
+        margin-top: -3px;
+    }
+}

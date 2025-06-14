@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+.main-stat
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.te-total
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 44px;
+    color: white;
+    font-family: 'Inria Sans', sans-serif;
+    background-color: #061A25;
+    border-radius: 30px;
+    width: 98%;
+    height: 250px;
+    margin-top: 10px;
+}
+.te-total p:nth-of-type(1) {
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 50px;
+}
+.te-total p:nth-of-type(2) {
+    font-size: 30px;
+    color: #A9A9A9;
+}
+.te
+{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    width: 98%;
+    overflow-x: scroll;
+    gap: 75px;
+
+}
+.te-film
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 34px;
+    color: white;
+    font-family: 'Inria Sans', sans-serif;
+    background-color: #061A25;
+    border-radius: 30px;
+    width: 455px;
+    padding: 2%;
+}
+.nb-film-vu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90px;
+}
+.btn-creer-liste
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #061A25;
+    border-radius: 30px;
+    color: white;
+    font-size: 50px;
+    font-family: 'Inria Sans', sans-serif;
+    font-style: bold;
+    text-decoration: none;
+    margin-top: 100px;
+    height: 130px;
+    width: 400px;
+    gap:10px;
+
+}
+.font-film-vu
+{
+    font-size: 75px;
+    padding: 0px;
+    margin-top: 0px;
+    color: #A9A9A9;
+}
+.icon2
+{
+    width: 30px; /* Largeur de l'icône */
+    height: 40px; /* Hauteur de l'icône */
+    color: #A8A8A8; /* Couleur de l'icône */
+}
